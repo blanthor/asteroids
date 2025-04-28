@@ -10,7 +10,8 @@ class Asteroid(CircleShape):
 
     def draw(self, screen):
         pygame.draw.circle(screen, (255, 255, 255), (int(self.position.x), int(self.position.y)), self.radius, 2)
+        # pygame.draw.circle(screen, (255, 255, 255), self.position, self.radius, 2)
 
     def update(self, dt):
-        return super().update(dt)
-        super().position += super().velcocity * dt
+        super().update(dt)
+        self.position += self.velocity * dt
